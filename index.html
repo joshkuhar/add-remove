@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Add Contacts</title>
-	<link rel="stylesheet" href="style.css">
+	
 </head>
 <body>
 <h1>Contacts</h1>
-<p id="test1">This is a paragraph.</p>
+<p id="test1">This is a sentence.</p>
 <p id="test2">This is another paragraph.</p>
 
 <p>Input field: <input type="text" id="test3" value="Mickey Mouse"></p>
@@ -15,14 +15,24 @@
 <button id="btn1">Set Text</button>
 <button id="btn2">Set HTML</button>
 <button id="btn3">Set Value</button>
-<button id="btn4">Clear Field</button><br>
-<button id="btn5">-Empty-</button>
-<button id="btn6">-Remove-</button>
-<button id="btn7">--HTML--</button>
-<button id="btn8">Clear Field</button>
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-	<script src="app.js"></script>
+  	<script>
+	//This fires the button and replaces the text
+	var bttn = document.querySelector("button");
+    bttn.addEventListener("click", function() {
+      var grabElement = document.getElementById("test1");
+      document.getElementById("test2").innerHTML = grabElement.innerHTML;
+    });
+
+var bttn2 = document.querySelector("btn2");
+btn2.addEventListener("click", function() {
+  var grabElement = document.getElementById("test1");
+  grabElement.insertAdjacentHTML("afterend", "<p id='test5'>New Line</p>");
+  
+  
+});
+</script>
+
 </body>
 </html>
-
-
